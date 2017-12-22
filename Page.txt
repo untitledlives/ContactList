@@ -1,0 +1,49 @@
+﻿API Layer(Controllers)
+- Validation
+- Convert API Model to Service Model(Optional)
+- Call Service Layer
+- Return HTTP Code + data
+
+Service Layer(Services)
+- Business Rules
+- Manipulate Data
+- Make REST Call to external system
+- Publish Message
+- Adjust data formatting
+- etc.
+- Convert Service Model to Data Model(Optional)
+- Call Data Layer
+- Return result
+
+Data Layer(Repository)
+- Minimal adjustments to data
+- Creation of "keys" if necessary or unique ids for data storage/retrieval
+- Database operations
+- return result
+
+
+
+Other Notes: Don't spawn threads, the framework is designed to use 1 thread
+from a pool for each incoming request, any threads you spawn reduce the # of consumers who can utilize your API at one time...its a big no no
+
+
+
+Kenny,
+
+Create a contacts list app for Android.
+
+•	The app should display a list of contacts in a RecyclerView (new version of listview) in an Android Activity/Fragment.
+•	The end-user should be able to select a contact to view “details” in a new screen.
+•	The details should include, name, phone #, email, etc.
+•	The end-user should be able to add a contact, remove a contact, or update a contact’s properties.
+•	The App should communicate to a Web Service (.NET Core or Java) via a REST API.
+•	The Web service should use a sql server as its backing store OR couchbase (your choice).
+•	Web Service should be able to retrieve a list of users, retrieve a specific user, add a user, delete a user, update a user. (REST ENDPOINTS)
+
+Thanks,
+Rob
+
+
+REST EXAMPLE:
+{base_url}/users -> Describes a list of users, Example Actions: GET, POST
+{base_url}/users/{user_id} -> Describes a specific User, Example Actions: GET, PUT, PATCH, DEL
