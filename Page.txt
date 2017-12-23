@@ -28,8 +28,6 @@ from a pool for each incoming request, any threads you spawn reduce the # of con
 
 
 
-Kenny,
-
 Create a contacts list app for Android.
 
 •	The app should display a list of contacts in a RecyclerView (new version of listview) in an Android Activity/Fragment.
@@ -40,8 +38,6 @@ Create a contacts list app for Android.
 •	The Web service should use a sql server as its backing store OR couchbase (your choice).
 •	Web Service should be able to retrieve a list of users, retrieve a specific user, add a user, delete a user, update a user. (REST ENDPOINTS)
 
-Thanks,
-Rob
 
 
 REST EXAMPLE:
